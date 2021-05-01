@@ -40,7 +40,7 @@ export const prototype = {
         cardText: black_dark,
         darkText: black_dark,
         lightText: white_bright,
-        greyText: gray_light,
+        greyText: gray_medium,
     },
     fonts: {
         fontName: lato,

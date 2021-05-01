@@ -3,8 +3,8 @@ import styled from 'styled-components';
 export const Button = styled.button`
   /* Default button, full width, main color, 10px top-bottom margin */
   height: 36px;
-  margin: 5px;
-  padding: 10px;
+  margin: 5px;/
+  padding: 5px;
   color: ${(props) => props.theme.colors.lightText};
   background: ${(props) => props.theme.colors.success};
   border: ${(props) =>
