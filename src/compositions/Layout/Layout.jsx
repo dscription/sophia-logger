@@ -4,22 +4,30 @@ import GlobalStyle from '../../global';
 
 const Layout = ({ children }) => {
   return (
-    <>
+    <Container>
       <Header>
         <h1>Location</h1>
       </Header>
       <Main>{children}</Main>
       <NavFooter />
       <GlobalStyle />
-    </>
+    </Container>
   );
 };
 
 export default Layout;
 
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+`
+
 const Main = styled.main`
   background: ${props => props.theme.colors.mainBg};
   padding: 8px;
+  /* height: 75%; */
+  overflow: scroll;
 `;
 
 const Header = styled.header`
@@ -28,4 +36,8 @@ const Header = styled.header`
   background: ${props => props.theme.colors.headerBg};
   align-items: center;
   text-align: center;
+  /* position: fixed;
+  top: 0;
+  width: 100%; */
+  align-self: flex-start;
 `;

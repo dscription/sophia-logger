@@ -30,7 +30,9 @@ const Nav = styled.nav`
   border: 1px solid black;
   background: ${(props) => props.theme.colors.navBg};
   height: 60px;
-  position: fixed;
-  bottom: 0;
+  align-self: flex-end;
   width: 100%;
+  /* position: fixed;
+  bottom: 0;
+  width: 100%; */
 `;

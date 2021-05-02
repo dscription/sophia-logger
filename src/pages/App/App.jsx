@@ -6,11 +6,7 @@ import { Route } from 'react-router-dom';
 import styled from 'styled-components';
 import Layout from '../../compositions/Layout/Layout'
 
-// Layout component should manage responsive resizing, will need media queries eventually.
-// const Layout = styled.main`
-//   padding: 10px;
-//   height: 100%;
-// `;
+
 
 function App() {
   return (
