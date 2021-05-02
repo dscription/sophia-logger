@@ -4,9 +4,7 @@ import { prototype } from '../../themes/Themes';
 import { Button, Card, Text } from '../../atoms';
 import { Route } from 'react-router-dom';
 import styled from 'styled-components';
-import Layout from '../../compositions/Layout/Layout'
-
-
+import Layout from '../../compositions/Layout/Layout';
 
 function App() {
   return (
@@ -33,6 +31,12 @@ function App() {
             <Text size="small">Small Paragraph Text</Text>
             <h1>Heading</h1>
             <h2>SubHeading</h2>
+            <h2>SubHeading</h2>
+            <h2>SubHeading</h2>
+            <h2>SubHeading</h2>
+            <h2>SubHeading</h2>
+            <h2>SubHeading</h2>
+            <h2>SubHeading</h2>
           </Layout>
         )}
       />
@@ -41,4 +45,3 @@ function App() {
 }
 
 export default App;
-

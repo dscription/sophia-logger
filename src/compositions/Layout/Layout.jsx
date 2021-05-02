@@ -26,7 +26,6 @@ const Container = styled.div`
 const Main = styled.main`
   background: ${props => props.theme.colors.mainBg};
   padding: 8px;
-  /* height: 75%; */
   overflow: scroll;
 `;
 
@@ -36,8 +35,5 @@ const Header = styled.header`
   background: ${props => props.theme.colors.headerBg};
   align-items: center;
   text-align: center;
-  /* position: fixed;
-  top: 0;
-  width: 100%; */
-  align-self: flex-start;
+ 
 `;
