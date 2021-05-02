@@ -6,7 +6,7 @@ export const Button = styled.button`
   height: 36px;
   margin: 5px;/
   padding: 5px;
-  color: ${(props) => props.theme.colors.lightText};
+  color: ${(props) => props.theme.colors.button};
   background: ${(props) => props.theme.colors.success};
   border: ${(props) =>
     props.variant === 'outlined'

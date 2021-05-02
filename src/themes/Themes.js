@@ -47,9 +47,10 @@ export const prototype = {
     lightCardText: white_bright,
     cardText: black_dark,
     // ! Text
-    darkText: black_dark,
-    lightText: white_bright,
-    greyText: gray_medium,
+    paragraph: white_eggshell,
+    heading: black_dark,
+    subheading: white_eggshell,
+    button: white_bright,
   },
   fonts: {
     fontName: lato,

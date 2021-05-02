@@ -29,14 +29,7 @@ function App() {
             <Text size="small">Small Paragraph Text</Text>
             <Text size="small">Small Paragraph Text</Text>
             <Text size="small">Small Paragraph Text</Text>
-            <h1>Heading</h1>
-            <h2>SubHeading</h2>
-            <h2>SubHeading</h2>
-            <h2>SubHeading</h2>
-            <h2>SubHeading</h2>
-            <h2>SubHeading</h2>
-            <h2>SubHeading</h2>
-            <h2>SubHeading</h2>
+            
           </Layout>
         )}
       />

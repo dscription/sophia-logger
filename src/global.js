@@ -60,13 +60,18 @@ body {
 h1 {
   font-family: ${(props) => props.theme.fonts.fontName};
   font-size: ${(props) => props.theme.fonts.size.heading};
-  color: ${(props) => props.theme.colors.cardText};
+  color: ${(props) => props.theme.colors.heading};
 }
 
 h2 {
   font-family: ${(props) => props.theme.fonts.fontName};
   font-size: ${(props) => props.theme.fonts.size.subHeading};
-  color: ${(props) => props.theme.colors.greyText};
+  color: ${(props) => props.theme.colors.subheading};
+}
+
+p {
+  font-family: ${(props) => props.theme.fonts.fontName};
+  color: ${(props) => props.theme.colors.paragraph};
 }
 
 ol, ul {

@@ -26,6 +26,7 @@ const Container = styled.div`
 const Main = styled.main`
   background: ${props => props.theme.colors.mainBg};
   padding: 8px;
+  height: auto;
   overflow: scroll;
 `;
 
@@ -33,7 +34,7 @@ const Header = styled.header`
   height: 30px;
   padding: 3px 0px;
   background: ${props => props.theme.colors.headerBg};
+  color: ${props => props.theme.colors.heading}
   align-items: center;
   text-align: center;
- 
 `;
