@@ -1,4 +1,4 @@
-export const red_light = '#FF3346';
+     export const red_light = '#FF3346';
 export const red_medium = '#DA002D';
 export const red_dark = '#B50015';
 export const green_light = '#4A9900';
@@ -15,7 +15,7 @@ export const purple_light = '#C18EFF';
 export const purple_medium = '#A373F8';
 export const purple_dark = '#8659DA';
 export const gray_light = '#EEEEEE';
-export const gray_medium = '7E7E7E';
+export const gray_medium = '#7E7E7E';
 export const gray_dark = '#333333';
 export const white_bright = '#FFFFFF';
 export const white_off = '#FEFEFA';

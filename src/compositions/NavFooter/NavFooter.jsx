@@ -28,6 +28,9 @@ const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   border: 1px solid black;
-  background: white;
-  height: 75px;
+  background: ${(props) => props.theme.colors.navBg};
+  height: 60px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 `;
