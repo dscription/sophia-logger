@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { lighten } from 'polished';
 
 export const Button = styled.button`
   /* Default button, full width, main color, 10px top-bottom margin */
@@ -9,7 +10,7 @@ export const Button = styled.button`
   background: ${(props) => props.theme.colors.success};
   border: ${(props) =>
     props.variant === 'outlined'
-      ? `1px solid ${props.theme.colors[props.color]}`
+      ? `2px solid ${props.theme.colors[props.color]}`
       : 'none'};
   border-radius: 4px;
 
@@ -37,8 +38,9 @@ const handleCentered = (props) => {
 };
 
 const handleBackgroundColor = (props) => {
-  return props.variant && props.variant === "outlined" && !props.disabled 
-    ? `background: ${props.theme.colors[props.color] + '60'}`
+  return props.variant && props.variant === 'outlined' && !props.disabled
+    ? // ? `background: ${props.theme.colors[props.color] + '60'} ;`
+      `background: ${lighten(0.35, props.theme.colors[props.color])} ;`
     : props.disabled
     ? `background: ${props.theme.colors.info}`
     : `background: ${props.theme.colors[props.color]}`;
