@@ -1,7 +1,5 @@
 import styled from 'styled-components';
 import NavFooter from '../NavFooter/NavFooter';
-import DotDotDot from '../../assets/icons/Dot_Dot_Dot.png';
-import { Button, Icon, Text } from '../../atoms';
 import Drawer from '../Drawer/Drawer';
 
 const Layout = ({ title, children }) => {
@@ -11,7 +9,7 @@ const Layout = ({ title, children }) => {
         <h1>{title}</h1>
       </Header>
       <Main>{children}</Main>
-      {/* <Drawer /> */}
+      <Drawer />
       <NavFooter />
     </Container>
   );
@@ -23,10 +21,11 @@ const Container = styled.div`
   height: 100vh;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: auto 1fr  auto auto;
   grid-template-areas:
     'header'
     'main'
+    'drawer'
     'footer';
 `;
 

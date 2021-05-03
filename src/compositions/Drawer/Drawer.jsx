@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styled from 'styled-components';
-import DotDotDot from '../../assets/icons/Dot_Dot_Dot.png';
-import { Button, Icon, Text } from '../../atoms';
+import { Button, Text } from '../../atoms';
+import DrawerHandle from '../DrawerHandle/DrawerHandle';
 
 const Drawer = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -11,12 +11,14 @@ const Drawer = () => {
     console.log('submitting');
   };
 
+  const handleToggleDrawer = () => {
+    setIsDrawerOpen((prevIsDrawerOpen) => !prevIsDrawerOpen);
+  };
+
   return (
     <DrawerContainer isOpen={isDrawerOpen}>
-      <DrawerHandle onClick={() => setIsDrawerOpen(prevIsDrawerOpen => !prevIsDrawerOpen)} >
-        <Icon src={DotDotDot} alt="Drawer Handle Icon, three dots." />
-      </DrawerHandle>
-      <DrawerBody>
+      <DrawerHandle toggleDrawer={handleToggleDrawer} />
+      <DrawerBody isOpen={isDrawerOpen}>
         <Text size="medium">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed velit
           libero, interdum ac elit sed.
@@ -40,31 +42,19 @@ const Drawer = () => {
 export default Drawer;
 
 const DrawerContainer = styled.div`
+  grid-area: drawer;
   display: flex;
   flex-direction: column;
   width: 100%;
-  /* //!. Ensure drawer height is the height of its content, not fixed. */
-  /* height: 600px; */
-  height: 0px;
   background: ${(props) => props.theme.colors.drawerBg};
-  /* display: none; */
-  visibility: hidden;
-`;
-
-const DrawerHandle = styled.div`
-  height: 20px;
-  width: 100%;
-  background: ${(props) => props.theme.colors.handle};
-  align-items: center;
-  text-align: center;
-  align-items: flex-start;
+  ${({ isOpen }) => (isOpen ? ' ' : 'height: 35px')};
 `;
 
 const DrawerBody = styled.div`
   display: flex;
-  /* height: auto; */
   flex-direction: column;
   padding: 10px 10px;
+  ${({ isOpen }) => (isOpen ? ' ' : 'display: none')};
 `;
 
 // !. Consider a maximum number of characters?
