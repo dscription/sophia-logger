@@ -3,6 +3,10 @@ import DotDotDot from '../../assets/icons/Dot_Dot_Dot.png';
 import { Button, Icon, Text } from '../../atoms';
 
 const Drawer = () => {
+  const handleSubmit = (event) => {
+    event.preventDefault()
+    console.log('submitting')
+  }
   return (
     <DrawerContainer>
       <DrawerHandle>
@@ -13,14 +17,14 @@ const Drawer = () => {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed velit
           libero, interdum ac elit sed.
         </Text>
-        <Form>
+        <Form onSubmit={handleSubmit}>
           <label htmlFor="curiosity">Tell me what you are curious about:</label>
           <TextArea
             id="curiosity"
             name="curiosity"
             placeholder="I want to learn about..."
           />
-          <Button size="small" style={{ marginLeft: 'auto' }}>
+          <Button size="small" style={{ marginLeft: 'auto' }} type="submit">
             Submit
           </Button>
         </Form>
@@ -38,7 +42,7 @@ const DrawerContainer = styled.div`
   /* //!. Ensure drawer height is the height of its content, not fixed. */
   height: 600px;
   background: ${(props) => props.theme.colors.drawerBg};
-  display: none;
+  /* display: none; */
 `;
 
 const DrawerHandle = styled.div`
