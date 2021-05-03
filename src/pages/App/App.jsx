@@ -13,7 +13,7 @@ function App() {
         exact
         path="/"
         render={() => (
-          <Layout>
+          <Layout title="location">
             <Button color="danger">Basic: Danger</Button>
             <Button variant="outlined" color="danger">
               Variant: Outlined

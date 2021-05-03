@@ -41,8 +41,9 @@ export const prototype = {
     navBg: white_eggshell,
     // ! Header
     headerBg: white_eggshell,
-    // ! Cards
+    // ! Main Background
     mainBg: gray_dark,
+    // ! Cards
     cardBg: white_eggshell,
     lightCardText: white_bright,
     cardText: black_dark,
@@ -51,6 +52,11 @@ export const prototype = {
     heading: black_dark,
     subheading: white_eggshell,
     button: white_bright,
+    label: white_eggshell,
+    
+    // ! Drawer
+    handle: gray_medium,
+    drawerBg: gray_dark,
   },
   fonts: {
     fontName: lato,

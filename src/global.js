@@ -26,7 +26,7 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-    margin: 0;
+  margin: 0;
 	padding: 0;
 	border: 0;
 	font-size: 100%;
@@ -94,6 +94,10 @@ table {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+label {
+  color: ${props => props.theme.colors.label}
 }
 `;
 
