@@ -5,10 +5,12 @@ import { Button, Card, Text } from '../../atoms';
 import { Route } from 'react-router-dom';
 import styled from 'styled-components';
 import Layout from '../../compositions/Layout/Layout';
+import Curiosity from '../Curiosity/Curiosity'
 
 function App() {
   return (
     <ThemeProvider theme={prototype}>
+    <Route exact path="/curiosity" render={() => <Curiosity />} />
       <Route
         exact
         path="/"

@@ -2,42 +2,44 @@ import styled from 'styled-components';
 import DotDotDot from '../../assets/icons/Dot_Dot_Dot.png';
 import { Button, Icon, Text } from '../../atoms';
 
-
 const Drawer = () => {
-  return ( <DrawerContainer>
-    <DrawerHandle>
-          <Icon src={DotDotDot} alt="Drawer Handle Icon, three dots." />
-        </DrawerHandle>
-        <DrawerBody>
-          <Text size="medium">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed velit
-            libero, interdum ac elit sed.
-          </Text>
-          <Form>
-            <label htmlFor="curiosity">
-              Tell me what you are curious about:
-            </label>
-            <TextArea
-              id="curiosity"
-              name="curiosity"
-              placeholder="I want to learn about..."
-            />
-            <Button size="small" style={{marginLeft: 'auto'}}>Submit</Button>
-          </Form>
-        </DrawerBody>
-  </DrawerContainer> );
-}
- 
+  return (
+    <DrawerContainer>
+      <DrawerHandle>
+        <Icon src={DotDotDot} alt="Drawer Handle Icon, three dots." />
+      </DrawerHandle>
+      <DrawerBody>
+        <Text size="medium">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed velit
+          libero, interdum ac elit sed.
+        </Text>
+        <Form>
+          <label htmlFor="curiosity">Tell me what you are curious about:</label>
+          <TextArea
+            id="curiosity"
+            name="curiosity"
+            placeholder="I want to learn about..."
+          />
+          <Button size="small" style={{ marginLeft: 'auto' }}>
+            Submit
+          </Button>
+        </Form>
+      </DrawerBody>
+    </DrawerContainer>
+  );
+};
+
 export default Drawer;
 
 const DrawerContainer = styled.div`
-display: flex;
+  display: flex;
   flex-direction: column;
   width: 100%;
   /* //!. Ensure drawer height is the height of its content, not fixed. */
-  height: 500px;
+  height: 600px;
   background: ${(props) => props.theme.colors.drawerBg};
-`
+  /* display: none; */
+`;
 
 const DrawerHandle = styled.div`
   height: 20px;
@@ -50,7 +52,7 @@ const DrawerHandle = styled.div`
 
 const DrawerBody = styled.div`
   display: flex;
-  height: auto;
+  /* height: auto; */
   flex-direction: column;
   padding: 10px 10px;
 `;

@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import User_Icon from '../../assets/icons/User.png';
 import Squares_Icon from '../../assets/icons/Squares.png';
+import { Icon } from '../../atoms';
 
 const NavFooter = () => {
   return (
@@ -20,10 +21,6 @@ const NavFooter = () => {
 
 export default NavFooter;
 
-const Icon = styled.img`
-  height: 100%;
-`;
-
 const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
@@ -33,5 +30,4 @@ const Nav = styled.nav`
   background: ${(props) => props.theme.colors.navBg};
   position: fixed;
   bottom: 0;
-  
 `;

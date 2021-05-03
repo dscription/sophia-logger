@@ -31,6 +31,8 @@ const Main = styled.main`
   background: ${(props) => props.theme.colors.mainBg};
   padding: 8px;
   overflow: scroll;
+  /* height: 100%; */
+  flex-grow: 1;
 `;
 
 const Header = styled.header`
