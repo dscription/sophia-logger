@@ -1,15 +1,19 @@
+import { useState } from 'react';
 import styled from 'styled-components';
 import DotDotDot from '../../assets/icons/Dot_Dot_Dot.png';
 import { Button, Icon, Text } from '../../atoms';
 
 const Drawer = () => {
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+
   const handleSubmit = (event) => {
-    event.preventDefault()
-    console.log('submitting')
-  }
+    event.preventDefault();
+    console.log('submitting');
+  };
+
   return (
-    <DrawerContainer>
-      <DrawerHandle>
+    <DrawerContainer isOpen={isDrawerOpen}>
+      <DrawerHandle onClick={() => setIsDrawerOpen(prevIsDrawerOpen => !prevIsDrawerOpen)} >
         <Icon src={DotDotDot} alt="Drawer Handle Icon, three dots." />
       </DrawerHandle>
       <DrawerBody>

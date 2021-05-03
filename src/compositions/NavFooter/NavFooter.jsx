@@ -8,8 +8,8 @@ const NavFooter = () => {
     <Nav>
       <Icon></Icon>
       {/* // todo: Add route to User Home */}
-      <a href="">
-        <Icon src={Squares_Icon} alt="Home Icon Button" />
+      <a href="/menu">
+        <Icon src={Squares_Icon} alt="Menu Icon Button" />
       </a>
       {/* // todo: Add route to User Profile / Logout. */}
       <a href="">
