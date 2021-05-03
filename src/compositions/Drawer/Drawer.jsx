@@ -38,7 +38,7 @@ const DrawerContainer = styled.div`
   /* //!. Ensure drawer height is the height of its content, not fixed. */
   height: 600px;
   background: ${(props) => props.theme.colors.drawerBg};
-  /* display: none; */
+  display: none;
 `;
 
 const DrawerHandle = styled.div`

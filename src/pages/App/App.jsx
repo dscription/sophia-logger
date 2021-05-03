@@ -5,12 +5,15 @@ import { Button, Card, Text } from '../../atoms';
 import { Route } from 'react-router-dom';
 import styled from 'styled-components';
 import Layout from '../../compositions/Layout/Layout';
-import Curiosity from '../Curiosity/Curiosity'
+import Curiosity from '../Curiosity/Curiosity';
+import Menu from '../Menu/Menu';
 
+ 
 function App() {
   return (
     <ThemeProvider theme={prototype}>
-    <Route exact path="/curiosity" render={() => <Curiosity />} />
+      <Route exact path="/curiosity" render={() => <Curiosity />} />
+      <Route exact path="/menu" render={() => <Menu/>} />
       <Route
         exact
         path="/"
@@ -31,7 +34,6 @@ function App() {
             <Text size="small">Small Paragraph Text</Text>
             <Text size="small">Small Paragraph Text</Text>
             <Text size="small">Small Paragraph Text</Text>
-            
           </Layout>
         )}
       />
