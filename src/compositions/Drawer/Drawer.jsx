@@ -44,9 +44,11 @@ const DrawerContainer = styled.div`
   flex-direction: column;
   width: 100%;
   /* //!. Ensure drawer height is the height of its content, not fixed. */
-  height: 600px;
+  /* height: 600px; */
+  height: 0px;
   background: ${(props) => props.theme.colors.drawerBg};
   /* display: none; */
+  visibility: hidden;
 `;
 
 const DrawerHandle = styled.div`

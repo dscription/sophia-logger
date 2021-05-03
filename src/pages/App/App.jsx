@@ -7,6 +7,7 @@ import styled from 'styled-components';
 import Layout from '../../compositions/Layout/Layout';
 import Curiosity from '../Curiosity/Curiosity';
 import Menu from '../Menu/Menu';
+import GlobalStyle from '../../global'
 
  
 function App() {
@@ -37,6 +38,7 @@ function App() {
           </Layout>
         )}
       />
+      <GlobalStyle />
     </ThemeProvider>
   );
 }
