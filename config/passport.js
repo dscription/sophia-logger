@@ -16,6 +16,7 @@ passport.use(
         if (user) {
           return done(null, user);
         } else {
+          console.log('getting new user')
           var newUser = new User({
             name: profile.displayName,
             email: profile.emails[0].value,

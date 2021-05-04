@@ -11,7 +11,7 @@ router.get(
 router.get(
   '/google/oauth2callback',
   passport.authenticate('google', {
-    successRedirect: 'http://localhost:3000/menu',
+    successRedirect: 'http://localhost:3000/',
     failureRedirect: 'http://localhost:3000/',
   })
 );
@@ -22,7 +22,7 @@ router.get(
 // Logout
 router.get('/logout', function (req, res) {
   req.logout();
-  res.redirect('/landing');
+  res.redirect('/');
 });
 
 module.exports = router;
