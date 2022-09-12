@@ -1,15 +1,15 @@
-import styled from 'styled-components';
-import NavFooter from '../NavFooter/NavFooter';
-import Drawer from '../Drawer/Drawer';
+import styled from "styled-components";
+import NavFooter from "../NavFooter/NavFooter";
+import Drawer from "../Drawer/Drawer";
 
-const Layout = ({ title, children }) => {
+const Layout = ({ title, children, user }) => {
   return (
     <Container>
       <Header>
         <h1>{title}</h1>
       </Header>
       <Main>{children}</Main>
-      <Drawer />
+      <Drawer user={user} />
       <NavFooter />
     </Container>
   );
@@ -21,12 +21,12 @@ const Container = styled.div`
   height: 100vh;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto 1fr  auto auto;
+  grid-template-rows: auto 1fr auto auto;
   grid-template-areas:
-    'header'
-    'main'
-    'drawer'
-    'footer';
+    "header"
+    "main"
+    "drawer"
+    "footer";
 `;
 
 const Main = styled.main`

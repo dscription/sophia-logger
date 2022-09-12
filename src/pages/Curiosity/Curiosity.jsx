@@ -1,15 +1,10 @@
-import { Card } from '../../atoms';
-import Layout from '../../compositions/Layout/Layout';
+import { Card } from "../../atoms";
+import Layout from "../../compositions/Layout/Layout";
 
-
-import { curiosities } from '../../data';
-
-const Curiosity = () => {
-  // todo: Make API call and getAll Curiosities, set to state.
-  // todo: Dont make another API call unless Curiosities have changed.
+const Curiosity = ({ user }) => {
   return (
-    <Layout title="Curiosity">
-      {curiosities.map((curiosity, idx) => (
+    <Layout title="Curiosity" user={user}>
+      {user.curiosities.map((curiosity, idx) => (
         <Card key={`curiosity${idx}`}>{curiosity.question}</Card>
       ))}
     </Layout>
